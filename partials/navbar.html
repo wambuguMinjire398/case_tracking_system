@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/nav.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="top">
+        <div class="logo">
+          <i class="bx bxl-codepen"></i>
+          <span>CMS</span>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+
+      <div class="user">
+        <img src="../images/user/brian.JPG" alt="me" class="use-img" />
+        <div>
+          <p class="bold">Clint.b</p>
+          <p>Admin</p>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href="../interface/dashboard.php">
+            <i class="bx bxs-grid-alt"></i>
+            <span class="nav-item">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+
+        <li>
+          <a href="../interface/add-user.php">
+            <i class="bx bxs-user-plus"></i>
+            <span class="nav-item">Users</span>
+          </a>
+          <span class="tooltip">Users</span>
+        </li>
+
+        <li>
+          <a href="../docHandling/addNewCase.php">
+            <i class="bx bxs-briefcase-alt"></i>
+            <span class="nav-item">Add Cases</span>
+          </a>
+          <span class="tooltip">Add Cases</span>
+        </li>
+
+        <li>
+          <a href="../add_events/eventAdd.php">
+            <i class="bx bxs-file-blank"></i>
+            <span class="nav-item">Add Events</span>
+          </a>
+          <span class="tooltip">Add Events</span>
+        </li>
+
+        <li>
+          <a href="#" onclick="toggleDropdown()">
+            <i class="bx bxs-file-blank"></i>
+            <span class="nav-item">Transcripts</span>
+          </a>
+          <span class="tooltip">Transcripts</span>
+          <ul class="dropdown" id="transcriptDropdown">
+            <li>
+              <a href="#">
+                <i class="bx bxs-file-blank"></i>
+                <span class="nav-item">Add Documentation</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bxs-file"></i>
+                <span class="nav-item">View Documentation</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bxs-log-out"></i>
+            <span class="nav-item">Logout</span>
+          </a>
+          <span class="tooltip">Logout</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="container"></div>
+    </div>
+  </body>
+
+  <script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+    btn.onclick = function () {
+      sidebar.classList.toggle("active");
+    };
+  </script>
+
+  <script>
+    function toggleDropdown() {
+      var dropdown = document.getElementById("transcriptDropdown");
+      if (dropdown.style.display === "none" || dropdown.style.display === "") {
+        dropdown.style.display = "block";
+      } else {
+        dropdown.style.display = "none";
+      }
+    }
+  </script>
+</html>

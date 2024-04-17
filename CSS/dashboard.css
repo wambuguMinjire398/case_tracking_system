@@ -1,0 +1,135 @@
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    
+}
+
+#dashboardMainContainer {
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+}
+
+div.dashboard_sidebar {
+    width: 20%;
+    background: #12171e;
+    height: 200vh;
+    
+}
+
+div.dashboard_content_container {
+    width: 80%;
+    background: #f4f6f9;
+}
+
+/* div.top .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 1;
+    justify-content: center;
+    font-size: 25px;
+}
+.top .logo i{
+    font-size: 2rem;
+    margin-right: 5px;
+}
+.logo span {
+    font-size: 25px;
+} */
+
+div.dashboard_sidebar_user {
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+div.dashboard_sidebar_user img {
+    width: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #f685a1;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+div.dashboard_sidebar_user span {
+    top: 20%;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #fff;
+    display: inline-block;
+}
+
+ul.dashboard_menu_lists {
+    margin-top: 20px;
+    list-style-type: none;
+    padding-left: 0; /* Remove left padding */
+    backdrop-filter: blur(20px);
+}
+
+ul.dashboard_menu_lists li {
+    padding: 15px 15px;
+    text-transform: capitalize;
+}
+
+ul.dashboard_menu_lists li a {
+    text-decoration: none;
+    color: #fff;
+    height: 100%;
+    display: block;
+    font-size: 20px;
+}
+
+ul.dashboard_menu_lists li a i{
+    font-size: 25px;
+}
+
+/* styling */
+ul.dashboard_menu_lists li:hover {
+    background: #f685a1;
+    color: #fff;
+}
+
+ul.dashboard_menu_lists li.menuActive{
+    background: #f685a1;
+    color: #fff;
+    transition: 0.3 all;
+}
+
+div.dashboard_topnav{
+    background-color: #fff;
+    padding: 20px;
+
+}
+
+div.dashboard_topnav a{
+    color: #848383;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a#logoutBtn{
+    float: left;    
+}
+
+div.dashboard_content{
+padding: 50px 10px 10px 10px;
+}
+
+div.dashboard_content_main{
+    background: #fff;
+    height: 100%;
+    min-height: 80px;
+    
+    
+}
+div.searchBarContainer{
+    width: 80%;
+}
+div.searchBarContainer input{
+    width: 70px;
+}

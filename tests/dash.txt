@@ -1,0 +1,77 @@
+<?php
+// start session
+session_start();
+if (!isset($_SESSION['user'])) header('Location: login.php');
+
+$user = $_SESSION['user'];
+
+// Get the list of logged-in users (you may need to modify this based on your authentication system)
+$logged_in_users = [$user]; // Replace this with the actual logic to get logged-in users
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <?php include '../CSS/resources.html';?>   
+  </head>
+
+  <body>
+<!-- sidebar menu -->
+<?php include('../partials/sidebar.php'); ?>
+
+<!-- topnav -->
+<div class="dashboard_content_container" id="dashboard_content_container">
+  <?php include('../partials/topnav.php')?>
+</div>
+<div class="main-content">
+      <div class="container">
+      <div class="dashboard_content_main">
+          <h2>Logged-In Users</h2>
+          <div class="users">
+          <table>
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <!-- Add more columns as needed -->
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($logged_in_users as $logged_in_user): ?>
+                <tr>
+                  <td><?= $logged_in_user['id'] ?></td>
+                  <td><?= $logged_in_user['firstName'] ?></td>
+                  <td><?= $logged_in_user['lastName'] ?></td>
+                  <td><?= $logged_in_user['email'] ?></td>
+                  <!-- Add more columns as needed -->
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+
+      </div>
+    </div>
+  </body>
+
+
+    <div id="dashboardMainContainer">
+      <div class="dashboard_content">
+        
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/nav.js"></script>
+
+  </body>
+</html>
